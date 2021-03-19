@@ -16,6 +16,9 @@ console.log(etàPasseggeroAsNumber);
 var prezzoBiglietto = numeroKmAsNumber * 0.21;
 console.log(prezzoBiglietto);
 
+var nuovoPrezzoBiglietto = prezzoBiglietto.toFixed(2);
+console.log(nuovoPrezzoBiglietto);
+
 // Calcolo sconto 20% per minorenni e 40% over 65 (numero)
 
 // calcolo per minorenni
@@ -25,6 +28,9 @@ console.log(percentMinorenni);
 var prezzoBigliettoMinorenni = prezzoBiglietto - percentMinorenni;
 console.log(prezzoBigliettoMinorenni);
 
+var nuovoPrezzoBigliettoMinorenni = prezzoBigliettoMinorenni.toFixed(2);
+console.log(nuovoPrezzoBigliettoMinorenni);
+
 // calcolo per over 65
 var percentOver = prezzoBiglietto * 40 / 100;
 console.log(percentOver);
@@ -32,12 +38,15 @@ console.log(percentOver);
 var prezzoBigliettoOver = prezzoBiglietto - percentOver;
 console.log(prezzoBigliettoOver);
 
-// Calcolo prezzo biglietto con sconto 20% per minorenni e 40% over 65 (numero)
+var nuovoPrezzoBigliettoOver = prezzoBigliettoOver.toFixed(2);
+console.log(nuovoPrezzoBigliettoOver);
+
+// Calcolo prezzo biglietto in base all' età del passeggero (numero)
 
 if (etàPasseggeroAsNumber > 65){
-    alert('Il prezzo del tuo biglietto è ' + prezzoBigliettoOver + '€');
+    alert('Il prezzo del tuo biglietto è ' + nuovoPrezzoBigliettoOver + '€');
 }else if(etàPasseggeroAsNumber < 18){
-    alert('Il prezzo del tuo biglietto è ' + prezzoBigliettoMinorenni + '€');
+    alert('Il prezzo del tuo biglietto è ' + nuovoPrezzoBigliettoMinorenni + '€');
 }else{
-    alert('Il prezzo del tuo biglietto è ' + prezzoBiglietto + '€');
+    alert('Il prezzo del tuo biglietto è ' + nuovoPrezzoBiglietto + '€');
 }
